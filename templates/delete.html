@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Task Manager | Delete {% endblock %}
+
+{% block vsebina %}
+<link rel="stylesheet" href="/assets/css/delete.css">
+<h2>Delete task:</h2>
+
+<p>Are you sure that you want to permanently delete {{ tasks.list }} ?</p>
+
+<form method="post" action="/details/{{ tasks.key.id() }}/delete">
+    <button type="submit">Confirm</button>
+</form>
+
+
+{% endblock %}

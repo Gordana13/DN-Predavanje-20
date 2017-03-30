@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} Task Manager | Details {% endblock %}
+
+{% block vsebina %}
+
+<h2> Your tasks:  </h2>
+
+<p> {{ tasks.list }} {{ tasks.status }}</p>
+<br/>
+
+<img width="30px" src="https://cdn4.iconfinder.com/data/icons/meBaze-Freebies/512/edit-notes.png">
+<a href="/details/{{ tasks.key.id() }}/edit">Edit</a>
+
+<br/> <br/>
+
+<img width="30px" src="https://qph.ec.quoracdn.net/main-qimg-83c6de25ed91d13a4f09fb5f11ca8853">
+<a href="/details/{{ tasks.key.id() }}/delete">Delete</a>
+
+{% endblock %}

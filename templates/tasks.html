@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Task Manager | Tasks {% endblock %}
+
+{% block vsebina %}
+
+    {% for task in tasks %}
+        <p>
+            <a href="/details/{{ task.key.id() }}">Details</a>
+            {{ task.list }} {{ task.status }}
+        </p>
+    {% else %}
+        <p>No tasks</p>
+    {% endfor %}
+
+{% endblock %}
